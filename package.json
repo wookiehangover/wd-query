@@ -1,0 +1,27 @@
+{
+  "name": "wd-query",
+  "version": "0.0.0",
+  "description": "A jQuery-esue wrapper for wd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wookiehangover/wd-query.git"
+  },
+  "keywords": [
+    "wd",
+    "selenium",
+    "automation"
+  ],
+  "author": "wookiehangover",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wookiehangover/wd-query/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-mocha-selenium": "~0.4.0"
+  }
+}
