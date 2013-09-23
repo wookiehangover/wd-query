@@ -27,7 +27,7 @@ browser.init()
   });
 ```
 
-### Why jQuery
+### Why jQuery?
 
 Because selector's make sense and so does chaining. Approaching selenium
 webdriver interactions as starting with selectors makes it easy to combine
@@ -36,7 +36,7 @@ multi-step sequences into terse and expressive statements.
 ### Why wd promises?
 
 Because the nested callback style is unruly for anything complex. Promises are
-also portable--meaning they can be passed around between functions and scopes.
+also portable--they can be easily passed around between functions and scopes.
 
 By using the wd promise interface wd-query is able to chain multiple async calls
-into a unified syntax.
+into a unified, selector-driven syntax.

@@ -9,8 +9,6 @@ module.exports = function(browser){
     return this;
   };
 
-  var $ = browser.elementByCssSelector;
-
   wdQuery.fn = wdQuery.prototype = {
 
     get: function(selector){
@@ -29,6 +27,21 @@ module.exports = function(browser){
       return this.get()
         .then(function(elem){
           elem.click();
+        });
+    },
+
+
+    submit: function(){
+      return this.get()
+        .then(function(elem){
+          elem.submit();
+        });
+    },
+
+    tap: function(){
+      return this.get()
+        .then(function(elem){
+          elem.tap();
         });
     }
 
