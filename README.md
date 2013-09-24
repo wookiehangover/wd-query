@@ -1,7 +1,7 @@
 wd-query
 ========
 
-jQuery style selectors for [wd]().
+jQuery style selectors for [wd](https://github.com/admc/wd).
 
 ### tl;dr
 
@@ -19,7 +19,7 @@ browser.init()
     return $('#login-form').submit();
   })
   .then(function(){
-    return $('body').hasClass('loggedIn');
+    return $('.loggedIn').isVisible('loggedIn');
   })
   .then(function(body){
     assert.ok(body);

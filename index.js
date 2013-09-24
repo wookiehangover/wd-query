@@ -26,22 +26,28 @@ module.exports = function(browser){
     click: function(){
       return this.get()
         .then(function(elem){
-          elem.click();
+          return elem.click();
         });
     },
-
 
     submit: function(){
       return this.get()
         .then(function(elem){
-          elem.submit();
+          return elem.submit();
         });
     },
 
     tap: function(){
       return this.get()
         .then(function(elem){
-          elem.tap();
+          return elem.tap();
+        });
+    },
+
+    isVisible: function(){
+      return this.get()
+        .then(function(elem){
+          return elem.isVisible();
         });
     }
 
