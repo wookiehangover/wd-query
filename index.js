@@ -49,6 +49,13 @@ module.exports = function(browser){
         .then(function(elem){
           return elem.isVisible();
         });
+    },
+
+    text: function(){
+      return this.get()
+        .then(function(elem){
+          return elem.text();
+        });
     }
 
   };
