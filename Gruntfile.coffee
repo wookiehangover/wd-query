@@ -2,7 +2,7 @@ config =
 
   jshint:
     all: [
-      'tasks/**/*.js'
+      'index.js'
     ],
     options:
       jshintrc: '.jshintrc'
