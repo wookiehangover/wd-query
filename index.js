@@ -1,9 +1,26 @@
 module.exports = function(browser){
 
+  function simpleSelectorMethodFactory(context, method){
+    return function(){
+      return context.get()
+        .then(function(elem){
+          return elem[method]();
+        });
+    };
+  }
+
+  var wdMethods = ['click', 'isVisible', 'submit', 'text', 'tap'];
+
   var wdQuery = function( selector ){
     if( !(this instanceof wdQuery) ){
       return new wdQuery(selector);
     }
+
+    var self = this;
+
+    wdMethods.forEach(function(method){
+      self[method] = simpleSelectorMethodFactory(self, method);
+    });
 
     this.selector = selector;
     return this;
@@ -20,41 +37,6 @@ module.exports = function(browser){
       return this.get()
         .then(function(elem){
           return value ? elem.type(value) : elem.getValue();
-        });
-    },
-
-    click: function(){
-      return this.get()
-        .then(function(elem){
-          return elem.click();
-        });
-    },
-
-    submit: function(){
-      return this.get()
-        .then(function(elem){
-          return elem.submit();
-        });
-    },
-
-    tap: function(){
-      return this.get()
-        .then(function(elem){
-          return elem.tap();
-        });
-    },
-
-    isVisible: function(){
-      return this.get()
-        .then(function(elem){
-          return elem.isVisible();
-        });
-    },
-
-    text: function(){
-      return this.get()
-        .then(function(elem){
-          return elem.text();
         });
     }
 
