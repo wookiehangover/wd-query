@@ -1,6 +1,6 @@
 {
   "name": "wd-query",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A jQuery-esue wrapper for wd",
   "main": "index.js",
   "scripts": {
