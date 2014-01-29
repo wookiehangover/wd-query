@@ -1,7 +1,7 @@
 wd-query
 ========
 
-v0.1.0
+v0.1.1
 
 jQuery style selectors for [wd](https://github.com/admc/wd) promises.
 
