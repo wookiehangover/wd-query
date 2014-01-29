@@ -1,7 +1,7 @@
 wd-query
 ========
 
-v0.1.0
+v0.1.1
 
 jQuery style selectors for [wd](https://github.com/admc/wd) promises.
 
@@ -21,7 +21,7 @@ browser.init()
     return $('#login-form').submit();
   })
   .then(function(){
-    return $('.loggedIn').isVisible('loggedIn');
+    return $('.loggedIn').isDisplayed('loggedIn');
   })
   .then(function(body){
     assert.ok(body);

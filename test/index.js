@@ -23,10 +23,10 @@ describe('wd-query', function () {
           return assert.equal(val, 'webdriver');
         })
         .then(function(){
-          return $('body').isVisible();
+          return $('body').isDisplayed();
         })
-        .then(function(isVisible){
-          assert.ok(isVisible);
+        .then(function(isDisplayed){
+          assert.ok(isDisplayed);
           done();
         });
     });
