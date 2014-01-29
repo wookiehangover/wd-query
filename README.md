@@ -21,7 +21,7 @@ browser.init()
     return $('#login-form').submit();
   })
   .then(function(){
-    return $('.loggedIn').isVisible('loggedIn');
+    return $('.loggedIn').isDisplayed('loggedIn');
   })
   .then(function(body){
     assert.ok(body);

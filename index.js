@@ -9,7 +9,7 @@ module.exports = function(browser){
     };
   }
 
-  var wdMethods = ['click', 'isVisible', 'submit', 'text', 'tap'];
+  var wdMethods = ['click', 'isVisible', 'isDisplayed', 'submit', 'text', 'tap'];
 
   var wdQuery = function( selector ){
     if( !(this instanceof wdQuery) ){
