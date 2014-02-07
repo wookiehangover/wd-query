@@ -36,7 +36,13 @@ module.exports = function(browser){
     val: function(value){
       return this.get()
         .then(function(elem){
-          return value ? elem.type(value) : elem.getValue();
+          if (value) {
+            elem.clear();
+            return elem.type(value);
+          }
+          else {
+            return elem.getValue();
+          }
         });
     }
 
