@@ -31,7 +31,7 @@ browser.init()
 
 ### Why jQuery?
 
-Because selector's make sense and so does chaining. Approaching selenium
+Because selectors make sense and so does chaining. Approaching selenium
 webdriver interactions as starting with selectors makes it easy to combine
 multi-step sequences into terse and expressive statements.
 
